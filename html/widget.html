@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo App - Widget</title>
+        <script src="//static.parastorage.com/services/third-party/jquery/3.1.1/dist/jquery.min.js"></script>
+        <script src="//static.parastorage.com/services/js-sdk/1.425.0/js/wix.min.js"></script>
+        <link rel="stylesheet" href="src/widget/widget.css">
+        <script src="widget.js"></script>
+        <style wix-style>
+            .wix-style-sample {
+                background: {{style._backgroundColor color-1}}
+                ;
+            }
+            .sample-title {
+                {{style._titleFont Heading-L}}
+                color: {{style._titleColor color-5}}
+                ;
+            }
+            .sample-settings-title {
+                {{style._titleFont Heading-L}}
+                color: {{style._titleColor color-5}}
+                ;
+                display: none;
+            }
+            .sample-content {
+                {{style._descFont Body-M}}
+                color: {{style._descColor color-4}}
+                ;
+            }
+            .sample-button {
+                cursor: pointer;
+                background: {{style._btnBgColor color-8}}
+                ;
+                color: {{style._btnTextColor color-1}}
+                ;
+                {{style._btnFont Body-M}}
+            }
+            .sample-button:hover {
+                opacity: 0.8;
+            }
+            .sample-input {
+                {{style._inputFont Body-M}}
+                border: 1px solid black;
+                background: {{style._inputFieldBackground color-4}}
+                ;
+                color: {{style._inputColor color-1}}
+                ;
+            }
+            .sample-input::placeholder {
+                color: {{style._inputColor color-1}}
+                ;
+                opacity: 0.7;
+            }
+            a {
+                color: {{style._linkColor color-8}}
+                ;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            a:hover {
+                opacity: 0.8;
+                text-decoration: none;
+            }
+            body {
+                border: 1px solid{{style._borderColor color-2}};
+                width: 500px;
+                height: 500px;
+                background: red;
+                position: relative;
+                /* Chrome, Safari, Opera */
+                -webkit-animation-name: myfirst;
+                -webkit-animation-duration: 10s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-delay: 0s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-direction: alternate;
+                -webkit-animation-play-state: running;
+                /* Standard syntax */
+                animation-name: myfirst;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-delay: 0s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-play-state: running;
+            }
+
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes myfirst {
+                0% {
+                    background: #ffe4b5;
+                    left: 0;
+                    top: 0;
+                }
+                25% {
+                    background: #f5f5f5;
+                    left: 0;
+                    top: 0;
+                }
+                50% {
+                    background: #fff0f5 left: 0;
+                    top: 0;
+                }
+                75% {
+                    background: #dcdcdc;
+                    left: 0;
+                    top: 0;
+                }
+                100% {
+                    background: #fffafa;
+                    left: 0;
+                    top: 0;
+                }
+            }
+            /* Standard syntax */
+            @keyframes myfirst {
+                0% {
+                    background: #ffe4b5;
+                    left: 0;
+                    top: 0;
+                }
+                25% {
+                    background: #f5f5f5;
+                    left: 0;
+                    top: 0;
+                }
+                50% {
+                    background: #fff0f5 left: 0;
+                    top: 0;
+                }
+                75% {
+                    background: #dcdcdc;
+                    left: 0;
+                    top: 0;
+                }
+                100% {
+                    background: #fffafa;
+                    left: 0;
+                    top: 0;
+                }
+            }
+            hr {
+                background-color: {{style._hrColor color-2}}
+                ;
+                height: 1px;
+                border: 0;
+            }
+            .stylebutton {
+                background-color: #4CAF50; /* Green */
+                border-color: white;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            span {
+                position: relative;
+                font-family: "Avenir Next", sans-serif;
+                font-weight: 600;
+                font-size: 12px;
+                text-transform: uppercase;
+                font-style: italic;
+                letter-spacing: 0.05em;
+                display: inline-block;
+            }
+
+            span:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: attr(filter-content);
+
+                filter: url(#motion-blur-filter);
+            }
+
+            h1 {
+                position: absolute;
+                text-transform: uppercase;
+                font-family: "Avenir Next", sans-serif;
+                font-size: 25px;
+                font-weight: 700;
+                color: #483d8b5;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div>
+                <div class>
+                    <img src="ziess.png" alt="Vision Express" width="300" height="300">
+                    <h1 class="sample-element sample-content">Next Generation Vision</h1>
+                    <hr>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="products">
+                    <h3>
+                        Products
+                        <h3></div>
+                        <div>
+                            <span class="span-text">
+                                Diagnose & treat</span>
+                            <br>
+                            <img src="zeiss_1.jpg" alt="zeisss_products" width="200" height="150">
+                            <br>
+                            <button class="stylebutton">Click Now If Interested</button>
+                        </div>
+                        <br>
+                        <div>
+                            <span class="span-text">
+                                Researching into micro and nanostructures</span>
+                            <br>
+                            <img src="zeiss_2.jpg" alt="zeiss products" width="200" height="150">
+                            <br>
+                            <button class="stylebutton">Click Now If Interested</button>
+                        </div>
+                    </div>
+                </body>
+            </html>
